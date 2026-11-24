@@ -1,0 +1,338 @@
+
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background-color: #243b2a;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f4b942;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f4b942;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 430px;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("images/food1.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e99b28;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #c47a16;
+}
+
+/* SECTION HEADINGS */
+section {
+    padding: 55px 7%;
+}
+
+section h2 {
+    text-align: center;
+    color: #243b2a;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* ABOUT SECTION */
+.about {
+    text-align: center;
+    background-color: white;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* RECIPE CARDS */
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    color: #243b2a;
+    padding: 12px 15px 5px;
+}
+
+.recipe-card p,
+.recipe-card span {
+    display: block;
+    padding: 0 15px;
+}
+
+.recipe-card span {
+    color: #bd781c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* TABLES */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #243b2a;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f5f0;
+}
+
+tbody tr:hover {
+    background-color: #e5eee5;
+}
+
+/* SIGN UP SECTION */
+.signup {
+    background-color: #eaf0e9;
+}
+
+.signup > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup form {
+    max-width: 750px;
+    margin: auto;
+}
+
+.signup td:first-child {
+    width: 35%;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #e99b28;
+    border-color: #e99b28;
+}
+
+.button-cell {
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.reset {
+    background-color: #c0392b;
+}
+
+.submit {
+    background-color: #287a45;
+}
+
+.reset:hover,
+.submit:hover {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    background-color: #243b2a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .recipe-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .recipe-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    .signup td {
+        padding: 9px;
+    }
+
+    .signup td:first-child {
+        width: 38%;
+    }
+
+    input,
+    select {
+        font-size: 13px;
+        padding: 9px;
+    }
+
+    button {
+        padding: 10px 17px;
+    }
+}
